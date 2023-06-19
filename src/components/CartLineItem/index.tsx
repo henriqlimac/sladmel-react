@@ -14,6 +14,7 @@ import {
   RemoveButton,
   ItemPreview,
   ItemDescription,
+  RemoveIcon,
 } from "./styles";
 
 type PropsType = {
@@ -23,8 +24,7 @@ type PropsType = {
 };
 
 const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
-  const img: string = new URL(`../../imgs/${item.sku}.jpg`, import.meta.url)
-    .href;
+  const img: string = `./${item.sku}.jpeg`
 
   const lineTotal: number = item.qty * item.price;
 
@@ -82,7 +82,7 @@ const CartLineItem = ({ item, dispatch, REDUCER_ACTIONS }: PropsType) => {
           title="Remove Item From Cart"
           onClick={onRemove}
         >
-          X
+          <RemoveIcon />
         </RemoveButton>
       </List>
     </Container>

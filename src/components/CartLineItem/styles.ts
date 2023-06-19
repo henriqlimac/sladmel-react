@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { X } from "styled-icons/fa-solid";
 
 export const Container = styled.div`
   display: flex;
@@ -17,14 +18,15 @@ export const ItemDescription = styled.div`
 export const List = styled.div`
   display: flex;
   align-items: center;
-  gap: 40px;
   padding: 10px;
+  justify-content: space-between;
+  width: 100%;
 `;
 
 export const ItemPreview = styled.div`
-  width: 40px;
   height: 40px;
-  background-color: red;
+  min-width: 40px;
+  max-width: 40px;
   border-radius: 8px;
 
   > img {
@@ -49,7 +51,10 @@ export const Price = styled.div`
 
 export const Quantity = styled.label``;
 
-export const Select = styled.select``;
+export const Select = styled.select`
+  width: 100px;
+  border: 1px solid var(--shadow-100);
+`;
 
 export const SubTotal = styled.div`
   font-weight: 600;
@@ -57,21 +62,25 @@ export const SubTotal = styled.div`
 `;
 
 export const RemoveButton = styled.div`
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-    background-color: red;
-    width: 25px;
-    height: 25px;
-    font-size: var(--size-xs);
-    line-height: 1px;
-    color: var(--primary);
-    border-radius: 50%;
-    transition: .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  background-color: red;
+  min-height: 30px;
+  min-width: 30px;
+  font-size: var(--size-xs);
+  line-height: 1px;
+  color: var(--primary);
+  border-radius: 50%;
+  transition: 0.3s;
 
-    &:hover {
-        background-color: rgba(200, 0, 0, 1);
-    }
+  &:hover {
+    background-color: rgba(200, 0, 0, 1);
+  }
+`;
+
+export const RemoveIcon = styled(X)`
+  max-height: 10px;
 `;

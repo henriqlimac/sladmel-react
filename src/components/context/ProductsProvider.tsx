@@ -9,22 +9,22 @@ export type ProductType = {
 const initState: ProductType[] = [
   {
     sku: "item0001",
-    name: "Lorem",
+    name: "Sladmélia",
     price: 23.99,
   },
   {
     sku: "item0002",
-    name: "Ipsum",
+    name: "4-Floor Cake",
     price: 12.99,
   },
   {
     sku: "item0003",
-    name: "Dolor",
+    name: "XL-Fruit Salad",
     price: 49.99,
   },
   {
     sku: "item0004",
-    name: "Sit",
+    name: "Fruitcake",
     price: 34.99,
   },
 ];

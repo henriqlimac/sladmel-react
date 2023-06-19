@@ -17,7 +17,7 @@ const MenuItem = ({
   REDUCER_ACTIONS,
   inCart,
 }: PropsType): ReactElement => {
-  const img: string = new URL(`../../../public/${product.sku}.jpeg`, import.meta.url).href;
+  const img: string = `./${product.sku}.jpeg`;
   console.log(img);
 
   const onAddToCart = () =>
