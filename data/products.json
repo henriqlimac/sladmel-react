@@ -1,0 +1,19 @@
+{
+    "products": [
+        {
+            "sku": "item0001",
+            "name": "Lorem",
+            "price": 23.99
+        },
+        {
+            "sku": "item0002",
+            "name": "Ipsum",
+            "price": 12.99
+        },
+        {
+            "sku": "item0003",
+            "name": "Dolor",
+            "price": 49.99
+        }
+    ]
+}

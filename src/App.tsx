@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyles from "./GlobalStyles/GlobalStyles";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-function App() {
+import Layout from "./components/Layout";
+
+import Landing from "./pages/Landing";
+import Menu from "./pages/Menu";
+
+export interface IApplicationProps {}
+
+const App: React.FC<IApplicationProps> = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route element={<Layout />}>
+            <Route path="/" element={<Landing />} />
+            <Route path="/menu" element={<Menu />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      <GlobalStyles />
+    </>
   );
-}
+};
 
 export default App;
